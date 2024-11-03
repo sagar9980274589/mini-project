@@ -53,7 +53,7 @@ const FoodMenu = () => {
 
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/menuItems?userEmail=${email}`
+          `https://mini-project-1-bffa.onrender.com/api/menuItems?userEmail=${email}`
         );
         setFoodItems(response.data);
       } catch (error) {
