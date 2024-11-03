@@ -1,0 +1,146 @@
+/* RestaurantApp.css */
+
+.restaurant-app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 20px;
+  height: 100vh; /* Full height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #007bff #f0f0f0; /* For Firefox */
+}
+
+.restaurant-app::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+.restaurant-app::-webkit-scrollbar-track {
+  background: #f0f0f0; /* Track color */
+}
+
+.restaurant-app::-webkit-scrollbar-thumb {
+  background-color: #007bff; /* Thumb color */
+  border-radius: 5px; /* Rounded corners */
+  border: 2px solid #f0f0f0; /* Padding around thumb */
+}
+
+.input, .button {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  width: 100%; /* Full width */
+  max-width: 300px; /* Max width */
+}
+
+.button {
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.menu-item {
+  background-color: #fff;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%; /* Full width */
+  max-width: 500px; /* Max width */
+  text-align: left;
+  animation: slideIn 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+}
+
+.menu-item img {
+  width: 100px; /* Increased width */
+  height: 100px; /* Increased height */
+  margin-right: 10px;
+  border-radius: 5px;
+  object-fit: cover; /* Change to cover */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fadeIn {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-20px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+.fooditems {
+  border: 1px solid black;
+  width: 100%; /* Full width */
+  max-width: 500px; /* Max width */
+  height: auto; /* Height adjusts */
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  margin-top: 15px;
+  padding: 5px;
+}
+
+.foodimage {
+  border: 1px solid black;
+  width: 30%;
+  height: auto; /* Adjust height automatically */
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.fooditems span {
+  width: 50%;
+  font-size: 1.5em;
+}
+
+.menubox {
+  
+  height: 67vh;
+  width: 100%; /* Full width */
+  max-width: 75vw; /* Max width */
+  overflow-y: scroll;
+  padding: 10px; /* Added padding */
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .fooditems {
+    flex-direction: column; /* Stack items on smaller screens */
+    align-items: flex-start; /* Align to the start */
+  }
+  
+  .foodimage {
+    width: 100%; /* Full width for images */
+    height: auto; /* Adjust height */
+  }
+
+  .fooditems span {
+    font-size: 1.2em; /* Smaller text size */
+  }
+
+  .input, .button {
+    max-width: 100%; /* Full width on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .fooditems span {
+    font-size: 1em; /* Further reduce text size */
+  }
+}

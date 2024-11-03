@@ -1,0 +1,73 @@
+.food-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align items */
+  width: 100%; /* Full width */
+  padding: 20px; /* Optional padding */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.menu-items,
+.order-summary,
+.ready-orders,
+.order-history {
+  width: 100%; /* Allow sections to take full width */
+  max-width: 600px; /* Optional max-width for readability */
+  margin: 10px 0; /* Margin for spacing between elements */
+  padding: 20px; /* Inner padding for content */
+  border: 1px solid #ccc; /* Optional border */
+  border-radius: 5px; /* Optional border radius */
+  background-color: #f9f9f9; /* Light background for contrast */
+}
+
+h2 {
+  margin-bottom: 10px; /* Add space below headings */
+}
+
+.divider {
+  width: 100%; /* Full width line */
+  border: 0; /* Remove default border */
+  border-top: 1px solid #ccc; /* Custom border */
+  margin: 20px 0; /* Space above and below the line */
+}
+
+.get-order,
+.clear-orders-button {
+  margin-top: 20px; /* Spacing above the buttons */
+  padding: 10px 20px; /* Button padding */
+  background-color: #007bff; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.get-order:hover,
+.clear-orders-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-controls button {
+  margin: 0 5px; /* Space between buttons */
+}
+
+.order-status-button {
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.order-status-button:hover {
+  background-color: darkred; /* Darker shade on hover */
+}
