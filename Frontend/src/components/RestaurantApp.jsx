@@ -65,7 +65,7 @@ function RestaurantApp() {
       const token = localStorage.getItem('token');
       const decodedToken = jwtDecode(token); 
       const response = await axios.post('
-        /api/menuItems', {
+        https://mini-project-1-bffa.onrender.com/api/menuItems', {
         ...newMenuItem,
         userEmail: decodedToken.email,
       });
