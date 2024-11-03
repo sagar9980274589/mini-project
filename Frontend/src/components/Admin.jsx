@@ -25,7 +25,7 @@ const Admin = () => {
       if (!tokenEmail) return; // Ensure the email is available
       try {
         // Fetch orders specific to the logged-in user by email
-        const response = await axios.get(`http://localhost:5000/api/orders?userEmail=${tokenEmail}`);
+        const response = await axios.get(`https://mini-project-1-bffa.onrender.com/api/orders?userEmail=${tokenEmail}`);
         setOrders(response.data);
       } catch (err) {
         setError(err.response?.data?.message || 'Error fetching orders. Please try again later.');
@@ -42,7 +42,7 @@ const Admin = () => {
     const confirmReady = window.confirm(`Are you sure you want to mark Order ${orderId} as ready?`);
     if (!confirmReady) return;
     try {
-      await axios.delete(`http://localhost:5000/api/orders/${orderId}`);
+      await axios.delete(`https://mini-project-1-bffa.onrender.com/api/orders/${orderId}`);
       setOrders((prevOrders) => prevOrders.filter((order) => order.orderId !== orderId));
       addReadyOrder(orderId, serialNumber);
       alert(`Order ${orderId} is marked as ready!`);
