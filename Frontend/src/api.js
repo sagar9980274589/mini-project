@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000'; // Adjust this if your backend is hosted elsewhere
+const API_URL = 'https://mini-project-1-bffa.onrender.com'; // Adjust this if your backend is hosted elsewhere
 
 // Function to register a user
 export const registerUser = async (userData) => {
